@@ -1,0 +1,3 @@
+pywinusb
+TogglPy
+requests
