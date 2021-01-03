@@ -32,11 +32,11 @@ class CallBacks:
     def close_lid(self):
 
         if self.id:
-            response = json.loads(self.toggl.postRequest(self.endpoints.STOP_TIME(self.id)))
+            self.toggl.postRequest(self.endpoints.STOP_TIME(self.id))
 
 
-DCB = Dream_Cheeky_Button();
+DCB = Dream_Cheeky_Button()
 callbacks = CallBacks()
-DCB.callbacks['LID_OPEN'].append(callbacks.open_lid);
-DCB.callbacks['LID_CLOSED'].append(callbacks.close_lid);
-DCB.run();
+DCB.callbacks['LID_OPEN'].append(callbacks.open_lid)
+DCB.callbacks['LID_CLOSED'].append(callbacks.close_lid)
+DCB.run()
